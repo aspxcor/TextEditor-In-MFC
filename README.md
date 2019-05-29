@@ -1,37 +1,12 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/aspxcor/EasyText/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/aspxcor/EasyText/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+# EasyText
+EasyText is my object-oriented programming course design work for this semester. It is based on the MFC framework development. The compilation environment is Microsoft Visual Studio.
+## Basic Functions 
+1, the program is used to create documents, support to view or edit text files, and supported file types are cpp, h, c, html and xml;
+2, the program interface refers to the notebook, there is a menu bar, a toolbar, easy to operate;
+3, the program supports character (string) statistics, find, replace and statistics on the user-specified string;
+4, the program supports fonts, fonts and font size settings;
+5, with Word statistics function: the number of spaces for all spaces (the same Chinese and English spaces), the number of English characters (only statistical English characters)
+## Features To Be Developed
+Automatic paging design, line spacing and margin settings, etc.
+## Warning
+*Part of the project heres come from the curriculum design of related courses in the College of Computer Science, Zhejiang University. **If you are a student from Zhejiang University, please do not copy the source code directly,because the relevant design code of the course will be checked.If you insist on copying the code directly, the consequences will be your own responsibility.***
