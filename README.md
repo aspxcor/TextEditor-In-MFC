@@ -13,4 +13,4 @@ EasyText is my object-oriented programming course design work for this semester.
 ## Features To Be Developed
 Automatic paging design, line spacing and margin settings, etc.
 ## Warning
-*Part of the project heres come from the curriculum design of related courses in the College of Computer Science, Zhejiang University. **If you are a student from Zhejiang University, please do not copy the source code directly,because the relevant design code of the course will be checked.If you insist on copying the code directly, the consequences will be your own responsibility.***
+*The project here comes from the curriculum design of related courses in the College of Computer Science, Zhejiang University. **If you are a student from Zhejiang University, please do not copy the source code directly,because the relevant design code of the course will be checked.If you insist on copying the code directly, the consequences will be your own responsibility.***
