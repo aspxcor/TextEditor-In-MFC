@@ -1,5 +1,5 @@
-# EasyText
-EasyText is my object-oriented programming course design work for this semester. It is based on the MFC framework development. The compilation environment is Microsoft Visual Studio.
+# TextEditor
+TextEditor is my object-oriented programming course design work for this semester. It is based on the MFC framework development. The compilation environment is Microsoft Visual Studio.
 ## Basic Functions 
 1, the program is used to create documents, support to view or edit text files, and supported file types are cpp, h, c, html and xml;
 
