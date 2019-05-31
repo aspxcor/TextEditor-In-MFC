@@ -1,0 +1,99 @@
+// TextEditorDlg.h : header file
+//
+#include "splash.h"
+#include "EditWindow.h"
+
+#if !defined(AFX_TextEditorDLG_H__68215130_2DA9_4F1E_984F_CC4F2A8B7C41__INCLUDED_)
+#define AFX_TextEditorDLG_H__68215130_2DA9_4F1E_984F_CC4F2A8B7C41__INCLUDED_
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+
+/////////////////////////////////////////////////////////////////////////////
+// CTextEditorDlg dialog
+
+class CTextEditorDlg : public CDialog
+{
+// Construction
+public:
+	void OpenFile(void);
+
+	CTextEditorDlg(CWnd* pParent = NULL);	// standard constructor
+	friend class CCountStringDialog;
+	friend class EditWindow;
+	CMenu m_Menu;					//定义菜单类对象
+	CFont m_Font;					//定义字体类对象
+	HACCEL m_hAccel;				//定义加速键对象
+
+	CToolBar TextEditor_ToolBar;           //添加的工具栏
+	CReBar TextEditor_ReBar;                    
+
+	BOOL isNew;						//判断是否是新建的文本
+	CString SavePath;				//保存文件打开时的路径
+	BOOL isModified;				//判断编辑控件的内容是否被修改
+
+	//查找/替换时使用的变量
+	CFindReplaceDialog* dlg;		//声明"查找/替换"对话框指针
+	int nindex;				     	//存储查找字符串的起始位置
+	int index;						//找到字符串的位置(可记录上次查找位置)
+	BOOL degree;					//判断是否为第一次替换的标记
+	BOOL find;						//判断是否进行查找的标记
+	
+	EditWindow * m_EditPtr; 
+
+// Dialog Data
+	//{{AFX_DATA(CTextEditorDlg)
+	enum { IDD = IDD_TextEditor_DIALOG };
+	EditWindow m_Edit;				//定义背景编辑框控件
+	//}}AFX_DATA
+
+	// ClassWizard generated virtual function overrides
+	//{{AFX_VIRTUAL(CTextEditorDlg)
+	public:
+	virtual BOOL PreTranslateMessage(MSG* pMsg);
+	virtual BOOL Create(LPCTSTR lpszClassName, LPCTSTR lpszWindowName, DWORD dwStyle, const RECT& rect, CWnd* pParentWnd, UINT nID, CCreateContext* pContext = NULL);
+	protected:
+	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV support
+	//}}AFX_VIRTUAL
+
+// Implementation
+protected:
+	HICON m_hIcon;
+
+	// Generated message map functions
+	//{{AFX_MSG(CTextEditorDlg)
+	virtual BOOL OnInitDialog();
+	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
+	afx_msg void OnPaint();
+	afx_msg HCURSOR OnQueryDragIcon();
+	afx_msg void OnMenuOpen();
+	afx_msg void OnMenuSave();
+	afx_msg void OnMenuSaveas();
+	afx_msg void OnMenuFindReplace();
+    afx_msg long OnFindReplace(WPARAM wParam, LPARAM lParam);
+	afx_msg void OnMenuFont();
+	afx_msg void OnMenuNew();
+	afx_msg void OnMenuAbout();
+	afx_msg void OnClose();
+	afx_msg void OnMenuCopy();
+    afx_msg void OnMenuPaste();
+	afx_msg void OnMenuCut();
+	afx_msg void OnMenuDelete();
+	afx_msg void OnMenuUndo();
+	afx_msg void OnMenuSelectAll();
+	afx_msg void OnMenuCountString();
+	afx_msg void OnMenuCountAll();
+	afx_msg void OnMenuHelp();
+	afx_msg void OnMenuReg();
+	afx_msg void OnMenuBackUp();
+	afx_msg int  OnCreate(LPCREATESTRUCT lpCreateStruct);
+	afx_msg void OnDropFiles(HDROP hDropInfo);
+	//}}AFX_MSG
+	DECLARE_MESSAGE_MAP()
+};
+
+//{{AFX_INSERT_LOCATION}}
+// Microsoft Visual C++ will insert additional declarations immediately before the previous line.
+
+#endif // !defined(AFX_TextEditorDLG_H__68215130_2DA9_4F1E_984F_CC4F2A8B7C41__INCLUDED_)

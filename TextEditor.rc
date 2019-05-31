@@ -1,0 +1,319 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\TextEditor.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\TextEditor.ico"
+IDI_ICON1               ICON    DISCARDABLE     "res\\ICON1.ico"
+IDI_ICON2               ICON    DISCARDABLE     "res\\ICON2.ico"
+IDI_ICON3               ICON    DISCARDABLE     "res\\ICON3.ico"
+IDI_ICON4               ICON    DISCARDABLE     "res\\ICON4.ico"
+IDI_ICON5               ICON    DISCARDABLE     "res\\ICON5.ico"
+IDI_ICON6               ICON    DISCARDABLE     "res\\ICON6.ico"
+IDI_ICON7               ICON    DISCARDABLE     "res\\ICON7.ico"
+IDI_ICON8               ICON    DISCARDABLE     "res\\ICON8.ico"
+IDI_ICON9               ICON    DISCARDABLE     "res\\ICON9.ico"
+IDI_ICON10              ICON    DISCARDABLE     "res\\txt.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 TextEditor"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,12,20,20
+    LTEXT           "TextEditor 3.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    CONTROL         "版权所有07415-02 (C) 2009",IDC_STATIC,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_TextEditor_DIALOG DIALOGEX 0, 0, 350, 412
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_ACCEPTFILES | WS_EX_APPWINDOW
+CAPTION "TextEditor"
+FONT 10, "宋体", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT1,7,38,336,354,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL,WS_EX_ACCEPTFILES | 
+                    WS_EX_STATICEDGE
+END
+
+IDD_HELPBOX DIALOGEX 0, 0, 253, 226
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "帮助"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,57,205,50,14
+    PUSHBUTTON      "取消",IDCANCEL,148,205,50,14
+    EDITTEXT        IDC_HELPFILE,88,7,158,191,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL,WS_EX_ACCEPTFILES
+    CONTROL         160,IDC_HelpBackground,"Static",SS_BITMAP | SS_SUNKEN,7,
+                    7,81,191
+END
+
+IDD_COUNTALLBOX DIALOG DISCARDABLE  0, 0, 144, 129
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "统计"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,8,107,50,14
+    PUSHBUTTON      "取消",IDCANCEL,86,107,50,14
+    GROUPBOX        "统计结果",IDC_COUNT,8,6,128,94
+    LTEXT           "所有字符数",IDC_STATIC,15,21,41,8
+    LTEXT           "中文字符数",IDC_STATIC,15,36,41,8
+    LTEXT           "英文字符数",IDC_STATIC,15,51,41,8
+    LTEXT           "数字字符数",IDC_STATIC,15,66,41,8
+    LTEXT           "空格数",IDC_STATIC,22,81,25,8
+    EDITTEXT        IDC_ALLCH,66,20,60,10,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_CHNCH,66,35,60,10,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_ENGCH,66,50,60,10,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_NUMCH,66,65,60,10,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_BLKCH,66,80,60,10,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_COUNTSTRINGBOX DIALOG DISCARDABLE  0, 0, 119, 103
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "统计字符串"
+FONT 10, "System"
+BEGIN
+    PUSHBUTTON      "取消",IDCANCEL,65,82,47,14
+    GROUPBOX        "",IDC_STATIC,7,3,105,72
+    LTEXT           "请输入要统计的字符串",IDC_STATIC,17,15,81,8
+    EDITTEXT        IDC_TOCOUNT,17,31,80,13,ES_AUTOHSCROLL
+    LTEXT           "统计结果",IDC_STATIC,17,55,33,8
+    EDITTEXT        IDC_STRNUM,57,54,40,10,ES_AUTOHSCROLL | ES_READONLY
+    DEFPUSHBUTTON   "统计",IDC_BUTTONCOUNTSTR,7,82,49,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "TextEditor Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "TextEditor\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2009\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "TextEditor.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "TextEditor 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_TextEditor_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 343
+        TOPMARGIN, 21
+        BOTTOMMARGIN, 405
+    END
+
+    IDD_HELPBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 246
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 219
+    END
+
+    IDD_COUNTALLBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 137
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_COUNTSTRINGBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 112
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS DISCARDABLE 
+BEGIN
+    "A",            ID_MENU_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_MENU_FIND_REPLACE,   VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_MENU_FONT,           VIRTKEY, ALT, NOINVERT
+    "H",            ID_MENU_HELP,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_MENU_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_MENU_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_MENU_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_MENU_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_StartMap            BITMAP  DISCARDABLE     "res\\StartMap.bmp"
+IDB_HelpBackground      BITMAP  DISCARDABLE     "res\\HelpBackground.bmp"
+IDB_EditBack            BITMAP  DISCARDABLE     "res\\EditBackground.bmp"
+IDB_ToolBarBack         BITMAP  DISCARDABLE     "res\\ToolBarBack.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 TextEditor(&A)..."
+END
+
+#endif    // Chinese (中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\TextEditor.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
