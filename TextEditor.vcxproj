@@ -133,6 +133,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CUndo.cpp" />
     <ClCompile Include="EditWindow.cpp" />
     <ClCompile Include="CountDlg.cpp" />
     <ClCompile Include="HelpDlg.cpp" />
@@ -150,6 +151,7 @@
     <ResourceCompile Include="TextEditor.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CUndo.h" />
     <ClInclude Include="EditWindow.h" />
     <ClInclude Include="CharInfo.h" />
     <ClInclude Include="CountDlg.h" />

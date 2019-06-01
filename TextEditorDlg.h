@@ -1,5 +1,7 @@
 // TextEditorDlg.h : header file
 //
+
+#include "Resource.h"
 #include "splash.h"
 #include "EditWindow.h"
 
@@ -20,7 +22,7 @@ public:
 	void OpenFile(void);
 
 	CTextEditorDlg(CWnd* pParent = NULL);	// standard constructor
-	friend class CCountStringDialog;
+	//friend class CCountStringDialog;
 	friend class EditWindow;
 	CMenu m_Menu;					//定义菜单类对象
 	CFont m_Font;					//定义字体类对象
@@ -82,7 +84,7 @@ protected:
 	afx_msg void OnMenuDelete();
 	afx_msg void OnMenuUndo();
 	afx_msg void OnMenuSelectAll();
-	afx_msg void OnMenuCountString();
+	//afx_msg void OnMenuCountString();
 	afx_msg void OnMenuCountAll();
 	afx_msg void OnMenuHelp();
 	afx_msg void OnMenuReg();

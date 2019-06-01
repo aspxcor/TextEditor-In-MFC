@@ -1,4 +1,4 @@
-//Microsoft Developer Studio generated resource script.
+// Microsoft Visual C++ generated resource script.
 //
 #include "resource.h"
 
@@ -13,13 +13,11 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// Chinese (中国) resources
+// 中文(简体，中国) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
-#ifdef _WIN32
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 #pragma code_page(936)
-#endif //_WIN32
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -27,18 +25,18 @@ LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 // TEXTINCLUDE
 //
 
-1 TEXTINCLUDE DISCARDABLE 
+1 TEXTINCLUDE 
 BEGIN
     "resource.h\0"
 END
 
-2 TEXTINCLUDE DISCARDABLE 
+2 TEXTINCLUDE 
 BEGIN
     "#include ""afxres.h""\r\n"
     "\0"
 END
 
-3 TEXTINCLUDE DISCARDABLE 
+3 TEXTINCLUDE 
 BEGIN
     "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
     "#define _AFX_NO_OLE_RESOURCES\r\n"
@@ -66,62 +64,67 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDR_MAINFRAME           ICON    DISCARDABLE     "res\\TextEditor.ico"
-IDI_ICON1               ICON    DISCARDABLE     "res\\ICON1.ico"
-IDI_ICON2               ICON    DISCARDABLE     "res\\ICON2.ico"
-IDI_ICON3               ICON    DISCARDABLE     "res\\ICON3.ico"
-IDI_ICON4               ICON    DISCARDABLE     "res\\ICON4.ico"
-IDI_ICON5               ICON    DISCARDABLE     "res\\ICON5.ico"
-IDI_ICON6               ICON    DISCARDABLE     "res\\ICON6.ico"
-IDI_ICON7               ICON    DISCARDABLE     "res\\ICON7.ico"
-IDI_ICON8               ICON    DISCARDABLE     "res\\ICON8.ico"
-IDI_ICON9               ICON    DISCARDABLE     "res\\ICON9.ico"
-IDI_ICON10              ICON    DISCARDABLE     "res\\txt.ico"
+IDR_MAINFRAME           ICON                    "res\\TextEditor.ico"
+
+IDI_ICON1               ICON                    "res\\ICON1.ico"
+
+IDI_ICON2               ICON                    "res\\ICON2.ico"
+
+IDI_ICON3               ICON                    "res\\ICON3.ico"
+
+IDI_ICON4               ICON                    "res\\ICON4.ico"
+
+IDI_ICON5               ICON                    "res\\ICON5.ico"
+
+IDI_ICON6               ICON                    "res\\ICON6.ico"
+
+IDI_ICON7               ICON                    "res\\ICON7.ico"
+
+IDI_ICON8               ICON                    "res\\ICON8.ico"
+
+IDI_ICON9               ICON                    "res\\ICON9.ico"
+
+IDI_ICON10              ICON                    "res\\txt.ico"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Dialog
 //
 
-IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "关于 TextEditor"
-FONT 9, "宋体"
+FONT 9, "宋体", 0, 0, 0x0
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,7,12,20,20
-    LTEXT           "TextEditor 3.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
-    CONTROL         "版权所有07415-02 (C) 2009",IDC_STATIC,"Static",
-                    SS_LEFTNOWORDWRAP | WS_GROUP,40,25,119,8
+    LTEXT           "TextEditor-一款简易的文本编辑器",IDC_STATIC,40,8,119,8,SS_NOPREFIX
+    CONTROL         "         浙江大学\n\n面向对象程序设计 课程设计作业",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,40,20,129,25
     DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
 END
 
-IDD_TextEditor_DIALOG DIALOGEX 0, 0, 350, 412
-STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
-    WS_SYSMENU
+IDD_TextEditor_DIALOG DIALOGEX 0, 0, 500, 350
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_ACCEPTFILES | WS_EX_APPWINDOW
 CAPTION "TextEditor"
 FONT 10, "宋体", 0, 0, 0x1
 BEGIN
-    EDITTEXT        IDC_EDIT1,7,38,336,354,ES_MULTILINE | ES_AUTOVSCROLL | 
-                    ES_WANTRETURN | WS_VSCROLL,WS_EX_ACCEPTFILES | 
-                    WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT1,0,0,500,340,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL,WS_EX_ACCEPTFILES | WS_EX_STATICEDGE
 END
 
 IDD_HELPBOX DIALOGEX 0, 0, 253, 226
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "帮助"
 FONT 10, "System", 0, 0, 0x1
 BEGIN
     DEFPUSHBUTTON   "确定",IDOK,57,205,50,14
     PUSHBUTTON      "取消",IDCANCEL,148,205,50,14
-    EDITTEXT        IDC_HELPFILE,88,7,158,191,ES_MULTILINE | ES_READONLY | 
-                    WS_VSCROLL,WS_EX_ACCEPTFILES
-    CONTROL         160,IDC_HelpBackground,"Static",SS_BITMAP | SS_SUNKEN,7,
-                    7,81,191
+    EDITTEXT        IDC_HELPFILE,7,62,239,136,ES_MULTILINE | ES_READONLY | WS_VSCROLL,WS_EX_ACCEPTFILES
+    CONTROL         IDB_HelpBackground,IDC_HelpBackground,"Static",SS_BITMAP | SS_SUNKEN,7,7,210,51
 END
 
-IDD_COUNTALLBOX DIALOG DISCARDABLE  0, 0, 144, 129
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_COUNTALLBOX DIALOG 0, 0, 144, 129
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "统计"
 FONT 10, "System"
 BEGIN
@@ -140,22 +143,7 @@ BEGIN
     EDITTEXT        IDC_BLKCH,66,80,60,10,ES_AUTOHSCROLL | ES_READONLY
 END
 
-IDD_COUNTSTRINGBOX DIALOG DISCARDABLE  0, 0, 119, 103
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "统计字符串"
-FONT 10, "System"
-BEGIN
-    PUSHBUTTON      "取消",IDCANCEL,65,82,47,14
-    GROUPBOX        "",IDC_STATIC,7,3,105,72
-    LTEXT           "请输入要统计的字符串",IDC_STATIC,17,15,81,8
-    EDITTEXT        IDC_TOCOUNT,17,31,80,13,ES_AUTOHSCROLL
-    LTEXT           "统计结果",IDC_STATIC,17,55,33,8
-    EDITTEXT        IDC_STRNUM,57,54,40,10,ES_AUTOHSCROLL | ES_READONLY
-    DEFPUSHBUTTON   "统计",IDC_BUTTONCOUNTSTR,7,82,49,14
-END
 
-
-#ifndef _MAC
 /////////////////////////////////////////////////////////////////////////////
 //
 // Version
@@ -178,18 +166,13 @@ BEGIN
     BEGIN
         BLOCK "080404b0"
         BEGIN
-            VALUE "Comments", "\0"
-            VALUE "CompanyName", "\0"
-            VALUE "FileDescription", "TextEditor Microsoft 基础类应用程序\0"
-            VALUE "FileVersion", "1, 0, 0, 1\0"
-            VALUE "InternalName", "TextEditor\0"
-            VALUE "LegalCopyright", "版权所有 (C) 2009\0"
-            VALUE "LegalTrademarks", "\0"
-            VALUE "OriginalFilename", "TextEditor.EXE\0"
-            VALUE "PrivateBuild", "\0"
-            VALUE "ProductName", "TextEditor 应用程序\0"
-            VALUE "ProductVersion", "1, 0, 0, 1\0"
-            VALUE "SpecialBuild", "\0"
+            VALUE "FileDescription", "TextEditor文本编辑器，一款简易文本编辑器"
+            VALUE "FileVersion", "1, 0, 0,"
+            VALUE "InternalName", "TextEditor"
+            VALUE "LegalCopyright", "版权所有 (C) 2019"
+            VALUE "OriginalFilename", "TextEditor.EXE"
+            VALUE "ProductName", "TextEditor文本编辑器"
+            VALUE "ProductVersion", "1.0.0"
         END
     END
     BLOCK "VarFileInfo"
@@ -198,8 +181,6 @@ BEGIN
     END
 END
 
-#endif    // !_MAC
-
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -207,7 +188,7 @@ END
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO DISCARDABLE 
+GUIDELINES DESIGNINFO
 BEGIN
     IDD_ABOUTBOX, DIALOG
     BEGIN
@@ -222,7 +203,6 @@ BEGIN
         LEFTMARGIN, 7
         RIGHTMARGIN, 343
         TOPMARGIN, 21
-        BOTTOMMARGIN, 405
     END
 
     IDD_HELPBOX, DIALOG
@@ -240,14 +220,6 @@ BEGIN
         TOPMARGIN, 7
         BOTTOMMARGIN, 122
     END
-
-    IDD_COUNTSTRINGBOX, DIALOG
-    BEGIN
-        LEFTMARGIN, 7
-        RIGHTMARGIN, 112
-        TOPMARGIN, 7
-        BOTTOMMARGIN, 96
-    END
 END
 #endif    // APSTUDIO_INVOKED
 
@@ -257,7 +229,7 @@ END
 // Accelerator
 //
 
-IDR_ACCELERATOR1 ACCELERATORS DISCARDABLE 
+IDR_ACCELERATOR1 ACCELERATORS
 BEGIN
     "A",            ID_MENU_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
     "F",            ID_MENU_FIND_REPLACE,   VIRTKEY, CONTROL, NOINVERT
@@ -275,22 +247,40 @@ END
 // Bitmap
 //
 
-IDB_StartMap            BITMAP  DISCARDABLE     "res\\StartMap.bmp"
-IDB_HelpBackground      BITMAP  DISCARDABLE     "res\\HelpBackground.bmp"
-IDB_EditBack            BITMAP  DISCARDABLE     "res\\EditBackground.bmp"
-IDB_ToolBarBack         BITMAP  DISCARDABLE     "res\\ToolBarBack.bmp"
+IDB_StartMap            BITMAP                  "res\\StartMap.bmp"
+
+IDB_HelpBackground      BITMAP                  "res\\HelpBackground.bmp"
+
+IDB_ToolBarBack         BITMAP                  "res\\ToolBarBack.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_HELPBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // String Table
 //
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     IDS_ABOUTBOX            "关于 TextEditor(&A)..."
 END
 
-#endif    // Chinese (中国) resources
+#endif    // 中文(简体，中国) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

@@ -105,7 +105,7 @@ BEGIN_MESSAGE_MAP(CTextEditorDlg, CDialog)
 	ON_COMMAND(ID_MENU_DELETE, OnMenuDelete)
 	ON_COMMAND(ID_MENU_UNDO, OnMenuUndo)
 	ON_COMMAND(ID_MENU_SELECT_ALL, OnMenuSelectAll)
-	ON_COMMAND(ID_MENU_COUNT_STRING, OnMenuCountString)
+	//ON_COMMAND(ID_MENU_COUNT_STRING, OnMenuCountString)
 	ON_COMMAND(ID_MENU_COUNT_ALL, OnMenuCountAll)
 	ON_COMMAND(ID_MENU_HELP, OnMenuHelp)
 	ON_COMMAND(ID_MENU_REG, OnMenuReg)
@@ -169,43 +169,49 @@ BOOL CTextEditorDlg::OnInitDialog()
 	m_PopMenu2.AppendMenu(MF_STRING,ID_MENU_UNDO,"撤销(&U)   Ctrl+Z");
 	m_PopMenu2.AppendMenu(MF_STRING, ID_MENU_REDO, "重做(&R)   Ctrl+Y");
     m_PopMenu2.AppendMenu(MF_SEPARATOR);
-	m_PopMenu2.AppendMenu(MF_STRING,ID_MENU_DELETE,"删除(&D)");
-	m_PopMenu2.AppendMenu(MF_SEPARATOR);
 	m_PopMenu2.AppendMenu(MF_STRING,ID_MENU_SELECT_ALL,"全选(&A)   Ctrl+A");
 	m_PopMenu2.AppendMenu(MF_STRING,ID_MENU_CUT,"剪切(&T)   Ctrl+X");		  
 	m_PopMenu2.AppendMenu(MF_STRING,ID_MENU_COPY,"复制(&C)   Ctrl+C");         
 	m_PopMenu2.AppendMenu(MF_STRING,ID_MENU_PASTE,"粘贴(&V)   Ctrl+V");        
-    
+	m_PopMenu2.AppendMenu(MF_STRING, ID_MENU_DELETE, "删除(&D)");
+	m_PopMenu2.AppendMenu(MF_SEPARATOR);
+	m_PopMenu2.AppendMenu(MF_STRING, ID_MENU_FIND_REPLACE, "查找与替换(&F)     Ctrl+F");
+
 	//“应用”菜单
 	CMenu m_PopMenu3;
 	m_PopMenu3.CreatePopupMenu();
 	m_Menu.AppendMenu(MF_POPUP,(UINT)m_PopMenu3.m_hMenu,"应用(&A)");
-	m_PopMenu3.AppendMenu(MF_STRING,ID_MENU_FIND_REPLACE,"查找/替换(&F)     Ctrl+F");
+	//m_PopMenu3.AppendMenu(MF_STRING,ID_MENU_FIND_REPLACE,"查找/替换(&F)     Ctrl+F");
 	m_PopMenu3.AppendMenu(MF_STRING,ID_MENU_FONT,"字体(&S)          Alt+F");
 	m_PopMenu3.AppendMenu(MF_SEPARATOR); 
+	m_PopMenu3.AppendMenu(MF_STRING, ID_MENU_REG, "关联注册(&R)");
+	m_PopMenu3.AppendMenu(MF_STRING, ID_MENU_BACKUP, "还原注册(&B)");
 	//m_PopMenu3.AppendMenu(MF_STRING,ID_MENU_COUNT_STRING,"统计字符串(&C)");
-	m_PopMenu3.AppendMenu(MF_STRING,ID_MENU_COUNT_ALL,"统计字数(&C)");	
+	m_PopMenu3.AppendMenu(MF_SEPARATOR);
+	m_PopMenu3.AppendMenu(MF_STRING,ID_MENU_COUNT_ALL,"字数统计(&C)");	
 
 	//“帮助”菜单
 	CMenu m_PopMenu4;
 	m_PopMenu4.CreatePopupMenu();
 	m_Menu.AppendMenu(MF_POPUP,(UINT)m_PopMenu4.m_hMenu,"帮助(&H)");
+	m_PopMenu4.AppendMenu(MF_STRING, ID_MENU_HELP, "查看帮助(&H)   Ctrl+H");
 	m_PopMenu4.AppendMenu(MF_STRING,ID_MENU_ABOUT,"关于TextEditor(&A)");
-	m_PopMenu4.AppendMenu(MF_STRING,ID_MENU_HELP,"帮助(&H)   Ctrl+H");
 
 	//“高级”菜单
+	/*
 	CMenu m_PopMenu5;
 	m_PopMenu5.CreatePopupMenu();
 	m_Menu.AppendMenu(MF_POPUP,(UINT)m_PopMenu5.m_hMenu,"高级(&H)");
 	m_PopMenu5.AppendMenu(MF_STRING,ID_MENU_REG,"关联注册(&R)");
 	m_PopMenu5.AppendMenu(MF_STRING,ID_MENU_BACKUP,"还原注册(&B)");
-    
+    */
+
 	//分离菜单句柄
 	m_PopMenu1.Detach();
 	m_PopMenu2.Detach();
 	m_PopMenu3.Detach();
 	m_PopMenu4.Detach();
-	m_PopMenu5.Detach();
+	//m_PopMenu5.Detach();
 	SetMenu(&m_Menu); //将菜单和窗口进行关联
 	
 	//不创建工具栏
@@ -694,6 +700,7 @@ void CTextEditorDlg::OnClose()
 //*****************************//
 //统计字符串的处理函数         //
 //*****************************//
+/*
 void CTextEditorDlg::OnMenuCountString()
 {
 	CString str;
@@ -703,7 +710,7 @@ void CTextEditorDlg::OnMenuCountString()
 	//dlg.DoModal();									//显示对话框
 
 }
-
+*/
 
 //*****************************//
 //统计字符的处理函数           //
