@@ -1,13 +1,14 @@
 #pragma once
-//#include <afxwin.h>
-class CUndo : public CDocument , public CTextEditorDlg
+#include <afxwin.h>
+class CUndo :
+	public CDocument,public CTextEditorDlg
 {	public:
 	CUndo();
 	~CUndo();
-	CObList m_undolist;
-	CObList m_redolist;
-	void Load(CMemFile* file);
-	void AddUndo(CMemFile* file);
+	CStringList m_undolist;
+	CStringList m_redolist;
+	void Load(CString str);
+	void AddUndo(CString str);
 private:
 	// ³·Ïú´ÎÊý
 	int m_undolevels;

@@ -156,7 +156,8 @@ void EditWindow::OnDropFiles(HDROP hDropInfo)
 		int n = pDlg->SavePath.ReverseFind('.');   
 		CString stl = (pDlg->SavePath).Right((pDlg->SavePath).GetLength() - n - 1);
 		if (stl == "txt" || stl == "TXT" || stl == "c" || stl == "C" || stl == "cpp" || stl == "CPP"
-			|| stl == "h" || stl == "H" || stl == "xml" || stl == "XML" || stl == "html" || stl == "HTML")
+			|| stl == "h" || stl == "H" || stl == "xml" || stl == "XML" || stl == "html" || stl == "HTML"
+			|| stl == "py" || stl == "java" || stl == "asm" || stl == "md" )
 		{
 			CFile file(str,CFile::modeReadWrite);										//以读与写方式打开文件		
 		
