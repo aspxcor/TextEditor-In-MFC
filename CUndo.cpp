@@ -1,7 +1,8 @@
+
 #include "stdafx.h"
 #include "TextEditorDlg.h"
 #include "CUndo.h"
-
+/*
 
 CUndo::CUndo(){
 	m_undolevels = 10;
@@ -83,3 +84,4 @@ void CUndo::Redo()
 		Load(str);
 	}
 }
+*/
